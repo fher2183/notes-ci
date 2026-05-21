@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci --production=false || npm install
 COPY . .
+RUN echo "Files in /app:" && ls -la /app/ && echo "Files in src:" && ls -la /app/src/ || echo "src NOT FOUND"
 RUN npm run build && ls -la dist/
 
 FROM node:18-alpine AS runner
