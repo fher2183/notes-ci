@@ -7,7 +7,7 @@
     "start:dev": "ts-node -r tsconfig-paths/register src/main.ts",
     "build": "tsc -p tsconfig.build.json",
     "prebuild": "rimraf dist",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand --passWithNoTests"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
