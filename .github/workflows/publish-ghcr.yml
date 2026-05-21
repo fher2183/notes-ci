@@ -29,6 +29,7 @@ jobs:
         with:
           context: .
           push: true
+          no-cache: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/nest-notes-ci:latest
             ghcr.io/${{ github.repository_owner }}/nest-notes-ci:${{ github.sha }}
