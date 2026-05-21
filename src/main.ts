@@ -9,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }));
 
   const config = new DocumentBuilder()
-    .setTitle('Notes API')
+    .setTitle('Notes Management API')
     .setDescription('API demo para ingreso y consulta de notas')
     .setVersion('0.1')
     .build();
