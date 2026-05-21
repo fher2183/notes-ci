@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci --production=false || npm install
 COPY . .
-RUN npm run build
+RUN npm run build && ls -la dist/
 
 FROM node:18-alpine AS runner
 WORKDIR /app
